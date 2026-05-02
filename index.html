@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sushi Bar Batken — роллы, пицца, бургеры, шаурма. Доставка по Баткену.">
+  <title>Sushi Bar Batken — Роллы, Пицца, Бургеры</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="menu/logo.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="menu/logo.jpg" alt="Sushi Bar" class="logo-img">
+        Sushi<span>Bar</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Главная</a>
+        <a href="#menu">Меню</a>
+        <a href="#contacts">Контакты</a>
+        <a href="https://wa.me/996775252527" class="btn btn-primary" style="padding:9px 20px;font-size:.9rem"
+          target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Заказать</a>
+      </nav>
+      <div class="burger-menu" id="burgerMenu"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--yellow)" stroke="none" style="vertical-align:-2px;margin-right:4px"><path d="M12 2c-3.5 0-6 2.5-6 6 0 4.5 6 12 6 12s6-7.5 6-12c0-3.5-2.5-6-6-6zm0 9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>Доставка по Баткену</div>
+        <h1>Вкус, который<br><span class="hl">покоряет сердца</span></h1>
+        <p>Свежие роллы, горячая пицца, сочные бургеры и шаурма. Заказывайте прямо сейчас!</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Смотреть меню</a>
+          <a href="https://wa.me/996775252527" class="btn btn-outline" target="_blank">WhatsApp →</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <img src="menu/glavnoe_foto.png" alt="Суши Сет" class="hero-img">
+          <div class="hero-brand">Sushi<span>Bar</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <h2 class="section-title reveal">Наше меню</h2>
+      <p class="section-sub reveal">Выбери категорию и найди своё любимое блюдо</p>
+
+      <div class="tabs reveal" id="tabs">
+        <button class="tab active" data-cat="all">Всё</button>
+        <button class="tab" data-cat="rolls">Роллы</button>
+        <button class="tab" data-cat="tempura">Темпура</button>
+        <button class="tab" data-cat="baked">Запечённые</button>
+        <button class="tab" data-cat="ayashi">Аяши</button>
+        <button class="tab" data-cat="ramen">Рамен</button>
+        <button class="tab" data-cat="shawarma">Шаурма</button>
+        <button class="tab" data-cat="burgers">Бургеры</button>
+        <button class="tab" data-cat="snacks">Снеки</button>
+        <button class="tab" data-cat="pizza">Пицца</button>
+        <button class="tab" data-cat="combo">Комбо</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- РОЛЛЫ -->
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/filadelfiya_lyuks.jpg" alt="Philadelphia Lux"></div><span
+            class="badge">Хит</span>
+          <h3>Филадельфия Люкс</h3>
+          <p class="desc">Лосось, сливочный сыр, нори, рис</p>
+          <div class="bottom"><span class="price">330 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/roll_s_ogurtsom.jpg" alt="Rolls"></div>
+          <h3>Ролл с огурцом</h3>
+          <p class="desc">Свежий огурец, рис, нори</p>
+          <div class="bottom"><span class="price">120 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/filadelfiya_klassicheskaya.jpg" alt="Philadelphia Classic"></div>
+          <h3>Филадельфия классическая</h3>
+          <p class="desc">Лосось, сливочный сыр, рис</p>
+          <div class="bottom"><span class="price">320 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/roll_s_lososem.jpg" alt="Rolls"></div>
+          <h3>Ролл с Лососем</h3>
+          <p class="desc">Лосось, рис, нори</p>
+          <div class="bottom"><span class="price">130 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/filadelfiya_s_ugryom.jpg" alt="Rolls"></div><span class="badge">Premium</span>
+          <h3>Филадельфия с Угрём</h3>
+          <p class="desc">Угорь, сливочный сыр, рис</p>
+          <div class="bottom"><span class="price">360 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/legenda_kuritsa.jpg" alt="Rolls"></div>
+          <h3>Легенда курица</h3>
+          <p class="desc">Курица, сливочный сыр, рис</p>
+          <div class="bottom"><span class="price">290 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/opalyonnyy.jpg" alt="Rolls"></div>
+          <h3>Опалённый</h3>
+          <p class="desc">Опалённый лосось, сливочный сыр</p>
+          <div class="bottom"><span class="price">330 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="rolls">
+          <div class="card-img-wrapper"><img src="menu/kaliforniya.jpg" alt="Rolls"></div>
+          <h3>Калифорния</h3>
+          <p class="desc">Краб, авокадо, огурец, икра</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- ТЕМПУРА -->
+        <div class="menu-card" data-cat="tempura">
+          <div class="card-img-wrapper"><img src="menu/tempura_s_lososem_i_ugryom.jpg" alt="Tempura"></div>
+          <h3>Темпура с лососем и угрём</h3>
+          <p class="desc">Лосось, угорь в хрустящем кляре</p>
+          <div class="bottom"><span class="price">330 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="tempura">
+          <div class="card-img-wrapper"><img src="menu/goryachiy_losos.jpg" alt="Tempura"></div>
+          <h3>Горячий Лосось</h3>
+          <p class="desc">Лосось в темпурном кляре</p>
+          <div class="bottom"><span class="price">330 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="tempura">
+          <div class="card-img-wrapper"><img src="menu/goryachiy_tsezar.jpg" alt="Tempura"></div>
+          <h3>Горячий Цезарь</h3>
+          <p class="desc">Курица, салат, соус цезарь в темпуре</p>
+          <div class="bottom"><span class="price">330 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="tempura">
+          <div class="card-img-wrapper"><img src="menu/goryachiy_roll_s_krevetkoy.jpg" alt="Tempura"></div>
+          <h3>Горячий ролл с креветкой</h3>
+          <p class="desc">Креветка в хрустящем кляре</p>
+          <div class="bottom"><span class="price">310 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- ЗАПЕЧЁННЫЕ -->
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/kaliforniya_zapechyonnaya.jpg" alt="Baked"></div>
+          <h3>Калифорния Запечённая</h3>
+          <p class="desc">Краб, сыр, запечённый соус</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/tsezar_zapechyonnaya.jpg" alt="Baked"></div>
+          <h3>Цезарь Запечённая</h3>
+          <p class="desc">Курица, соус цезарь, сыр</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/zapechyonnyy_roll_s_lososem.jpg" alt="Baked"></div>
+          <h3>Запечённый ролл с лососем</h3>
+          <p class="desc">Лосось, сливочный сыр, соус</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/goryachiy_kaliforniya.jpg" alt="Baked"></div>
+          <h3>Горячий Калифорния</h3>
+          <p class="desc">Краб, сыр, горячий соус</p>
+          <div class="bottom"><span class="price">330 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/legenda_kuritsa.jpg" alt="Baked"></div>
+          <h3>Легенда курица</h3>
+          <p class="desc">Курица запечённая с соусом</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/legenda_tunets.jpg" alt="Baked"></div>
+          <h3>Легенда тунец</h3>
+          <p class="desc">Тунец запечённый с соусом</p>
+          <div class="bottom"><span class="price">310 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/zapechyonnaya_losos.jpg" alt="Baked"></div>
+          <h3>Запечённая лосось</h3>
+          <p class="desc">Лосось запечённый со сливочным сыром</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="baked">
+          <div class="card-img-wrapper"><img src="menu/gavayskaya_zapechyonnaya.jpg" alt="Baked"></div>
+          <h3>Гавайская Запечённая</h3>
+          <p class="desc">Ананас, курица, сыр запечённый</p>
+          <div class="bottom"><span class="price">300 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- АЯШИ -->
+        <div class="menu-card" data-cat="ayashi">
+          <div class="card-img-wrapper"><img src="menu/ayashi_kuritsa.jpg" alt="Ayashi"></div>
+          <h3>Аяши курица</h3>
+          <p class="desc">Рисовые шарики с курицей</p>
+          <div class="bottom"><span class="price">190 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="ayashi">
+          <div class="card-img-wrapper"><img src="menu/ayashi_losos.jpg" alt="Ayashi"></div>
+          <h3>Аяши лосось</h3>
+          <p class="desc">Рисовые шарики с лососем</p>
+          <div class="bottom"><span class="price">210 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="ayashi">
+          <div class="card-img-wrapper"><img src="menu/ayashi_tunets.jpg" alt="Ayashi"></div>
+          <h3>Аяши тунец</h3>
+          <p class="desc">Рисовые шарики с тунцом</p>
+          <div class="bottom"><span class="price">200 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="ayashi">
+          <div class="card-img-wrapper"><img src="menu/ayashi_syrnyy.jpg" alt="Ayashi"></div>
+          <h3>Аяши сырный</h3>
+          <p class="desc">Рисовые шарики с сыром</p>
+          <div class="bottom"><span class="price">180 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- РАМЕН -->
+        <div class="menu-card" data-cat="ramen">
+          <div class="card-img-wrapper"><img src="menu/ramen_s_kuritsey.jpg" alt="Ramen"></div>
+          <h3>Рамен с курицей</h3>
+          <p class="desc">Бульон, лапша, курица, яйцо</p>
+          <div class="bottom"><span class="price">220 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="ramen">
+          <div class="card-img-wrapper"><img src="menu/ramen_slivochnyy_s_kuritsey.jpg" alt="Ramen"></div>
+          <h3>Рамен сливочный с курицей</h3>
+          <p class="desc">Сливочный бульон, лапша, курица</p>
+          <div class="bottom"><span class="price">250 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="ramen">
+          <div class="card-img-wrapper"><img src="menu/ramen_govyadina.jpg" alt="Ramen"></div>
+          <h3>Рамен говядина</h3>
+          <p class="desc">Бульон, лапша, говядина, яйцо</p>
+          <div class="bottom"><span class="price">250 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="ramen">
+          <div class="card-img-wrapper"><img src="menu/tom_yam.jpg" alt="Ramen"></div><span class="badge">Хит</span>
+          <h3>Том Ям</h3>
+          <p class="desc">Острый тайский суп с морепродуктами</p>
+          <div class="bottom"><span class="price">320 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- ШАУРМА -->
+        <div class="menu-card" data-cat="shawarma">
+          <div class="card-img-wrapper"><img src="menu/maksi_shaurma.jpg" alt="Shawarma"></div><span
+            class="badge">Макси</span>
+          <h3>Макси шаурма</h3>
+          <p class="desc">Большая порция, курица, овощи, соус</p>
+          <div class="bottom"><span class="price">250 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="shawarma">
+          <div class="card-img-wrapper"><img src="menu/kurinaya_shaurma.jpg" alt="Shawarma"></div>
+          <h3>Куриная шаурма</h3>
+          <p class="desc">Курица, овощи, фирменный соус</p>
+          <div class="bottom"><span class="price">200 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- БУРГЕРЫ -->
+        <div class="menu-card" data-cat="burgers">
+          <div class="card-img-wrapper"><img src="menu/chiz_burger.jpg" alt="Бургер"></div>
+          <h3>ЧИЗ бургер</h3>
+          <p class="desc">Булочка, фирменный соус, листья салата, томаты, маринованные огурцы, сырная котлета</p>
+          <div class="bottom"><span class="price">220 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="burgers">
+          <div class="card-img-wrapper"><img src="menu/bif_burger.jpg" alt="Burgers"></div>
+          <h3>Биф бургер</h3>
+          <p class="desc">Булочка, фирменный соус, листья салата, томаты, маринованные огурцы, говяжья котлета</p>
+          <div class="bottom"><span class="price">190 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="burgers">
+          <div class="card-img-wrapper"><img src="menu/chiken_burger.jpg" alt="Burgers"></div>
+          <h3>Чикен бургер</h3>
+          <p class="desc">Булочка, фирменный соус, листья салата, томаты, маринованные огурцы, куриные стрипсы</p>
+          <div class="bottom"><span class="price">190 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- СНЕКИ -->
+        <div class="menu-card" data-cat="snacks">
+          <div class="card-img-wrapper"><img src="menu/kartoshka_fri.jpg" alt="Snacks"></div>
+          <h3>Картошка фри</h3>
+          <p class="desc">Хрустящая золотистая картошка</p>
+          <div class="bottom"><span class="price">140 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="snacks">
+          <div class="card-img-wrapper"><img src="menu/naggetsy.jpg" alt="Snacks"></div>
+          <h3>Наггетсы</h3>
+          <p class="desc">Куриные наггетсы в панировке</p>
+          <div class="bottom"><span class="price">140 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="snacks">
+          <div class="card-img-wrapper"><img src="menu/kurinye_krylyshki.jpg" alt="Snacks"></div>
+          <h3>Куриные крылышки</h3>
+          <p class="desc">Крылышки в фирменном соусе</p>
+          <div class="bottom"><span class="price">35 <span class="unit">сом/шт</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- ПИЦЦА -->
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/pepperoni_dvoynoy.jpg" alt="Пицца"></div><span class="badge">Двойной</span>
+          <h3>Пепперони (Двойной)</h3>
+          <p class="desc">Томатный соус, сыр, колбаса (двойная порция)</p>
+          <div class="sizes"><span class="size-pill">30см — 480с</span><span class="size-pill">35см — 630с</span></div>
+          <div class="bottom"><span class="price">480 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/margarita.jpg" alt="Pizza"></div>
+          <h3>Маргарита</h3>
+          <p class="desc">Томатный соус, сыр моцарелла, помидор</p>
+          <div class="sizes"><span class="size-pill">30см — 310с</span><span class="size-pill">35см — 400с</span></div>
+          <div class="bottom"><span class="price">310 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/alfredo.jpg" alt="Pizza"></div>
+          <h3>Альфредо</h3>
+          <p class="desc">Сырный соус, курица, грибы, сыр моцарелла</p>
+          <div class="sizes"><span class="size-pill">30см — 420с</span><span class="size-pill">35см — 500с</span></div>
+          <div class="bottom"><span class="price">420 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/syrnaya_kurochka.jpg" alt="Pizza"></div>
+          <h3>Сырная Курочка</h3>
+          <p class="desc">Сырный соус, курица, сыр моцарелла</p>
+          <div class="sizes"><span class="size-pill">30см — 420с</span><span class="size-pill">35см — 500с</span></div>
+          <div class="bottom"><span class="price">420 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/pitstsa_syrnaya.jpg" alt="Pizza"></div>
+          <h3>Пицца Сырная</h3>
+          <p class="desc">Сырный соус, сыр моцарелла, чеддер сыр</p>
+          <div class="sizes"><span class="size-pill">30см — 420с</span><span class="size-pill">35см — 500с</span></div>
+          <div class="bottom"><span class="price">420 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/pitstsa_pepperoni.jpg" alt="Pizza"></div>
+          <h3>Пицца Пепперони</h3>
+          <p class="desc">Томатный соус, сыр моцарелла, колбаса</p>
+          <div class="sizes"><span class="size-pill">30см — 420с</span><span class="size-pill">35см — 500с</span></div>
+          <div class="bottom"><span class="price">420 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/pitstsa_tsezar.jpg" alt="Pizza"></div>
+          <h3>Пицца Цезарь</h3>
+          <p class="desc">Соус томатный, сыр моцарелла, курица, томат, листья салата</p>
+          <div class="sizes"><span class="size-pill">30см — 420с</span><span class="size-pill">35см — 500с</span></div>
+          <div class="bottom"><span class="price">420 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card" data-cat="pizza">
+          <div class="card-img-wrapper"><img src="menu/pitstsa_chizburger.jpg" alt="Pizza"></div>
+          <h3>Пицца Чизбургер</h3>
+          <p class="desc">Томатный соус, сыр моцарелла, красный лук, форне, помидор, маринованный огурец</p>
+          <div class="sizes"><span class="size-pill">30см — 420с</span><span class="size-pill">35см — 500с</span></div>
+          <div class="bottom"><span class="price">420 <span class="unit">сом</span></span><button
+              class="btn-cart">+</button></div>
+        </div>
+
+        <!-- КОМБО / СЕТЫ -->
+        <div class="menu-card combo" data-cat="combo">
+          <div class="card-img-wrapper"><img src="menu/set_n1.jpg" alt="Combo"></div><span
+            class="badge">Выгодно</span>
+          <h3>Сет №1</h3>
+          <p class="items-list">Запечённый Цезарь, Запеченная Калифорния, Горячий фугури, Горячий Цезарь, Ролл с огурцом
+          </p>
+          <div class="bottom"><span class="price"><span class="old">1470с</span>1330 <span
+                class="unit">сом</span></span><button class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card combo" data-cat="combo">
+          <div class="card-img-wrapper"><img src="menu/set_n2.jpg" alt="Combo"></div><span
+            class="badge">Выгодно</span>
+          <h3>Сет №2</h3>
+          <p class="items-list">Филадельфия люкс, Филадельфия с угрём, Спайс маки, Горячая Калифорния, Ролл лава,
+            Гавайская запечённая, 2 напитка</p>
+          <div class="bottom"><span class="price"><span class="old">2410с</span>2200 <span
+                class="unit">сом</span></span><button class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card combo" data-cat="combo">
+          <div class="card-img-wrapper"><img src="menu/kombo_n1.jpg" alt="Combo"></div>
+          <h3>Комбо №1</h3>
+          <p class="items-list">Биф бургер, Картошка фри, Соус SUNBEL</p>
+          <div class="bottom"><span class="price"><span class="old">415с</span>360 <span
+                class="unit">сом</span></span><button class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card combo" data-cat="combo">
+          <div class="card-img-wrapper"><img src="menu/kombo_n2.jpg" alt="Combo"></div>
+          <h3>Комбо №2</h3>
+          <p class="items-list">Чикен бургер, Картошка фри, Соус SUNBEL</p>
+          <div class="bottom"><span class="price"><span class="old">315с</span>290 <span
+                class="unit">сом</span></span><button class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card combo" data-cat="combo">
+          <div class="card-img-wrapper"><img src="menu/kombo_n3.jpg" alt="Combo"></div><span class="badge">Мега</span>
+          <h3>Комбо №3</h3>
+          <p class="items-list">Крылышки 12 шт, Пепперони, Запечённый Цезарь, Ролл Филадельфия лайт, Фри 2 порции, 1
+            напиток</p>
+          <div class="bottom"><span class="price"><span class="old">1920с</span>1750 <span
+                class="unit">сом</span></span><button class="btn-cart">+</button></div>
+        </div>
+        <div class="menu-card combo" data-cat="combo">
+          <div class="card-img-wrapper"><img src="menu/kombo_n4.jpg" alt="Combo"></div><span class="badge">Макси</span>
+          <h3>Комбо №4</h3>
+          <p class="items-list">Крылышки 20 шт, Пицца сырная курочка, Пицца пепперони, Филадельфия лайт, Горячая
+            калифорния, Роллы с огурцом</p>
+          <div class="bottom"><span class="price"><span class="old">3160с</span>2870 <span
+                class="unit">сом</span></span><button class="btn-cart">+</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <h2 class="section-title reveal">Контакты</h2>
+      <p class="section-sub reveal">Звоните или пишите — мы на связи!</p>
+      <div class="contact-row reveal">
+        <a href="https://wa.me/996775252527" class="contact-item" target="_blank"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span> WhatsApp</a>
+        <a href="tel:+996775252527" class="contact-item"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> 0775 25 25 27</a>
+        <a href="https://instagram.com/sushi_bar_batken1" class="contact-item" target="_blank"><span
+            class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span> @sushi_bar_batken1</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 Sushi Bar Batken. Все права защищены.</span>
+        <div class="footer-socials">
+          <a href="https://instagram.com/sushi_bar_batken1" target="_blank" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/996775252527" target="_blank" title="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          <a href="tel:+996775252527" title="Звонок"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART UI -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>Корзина</h2>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" style="display:flex;align-items:center;justify-content:center;gap:8px;">Корзина пуста <svg
+          width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span id="cartTotalPrice">0</span>
+      </div>
+      <div class="cart-input-group">
+        <label for="cartAddress" class="cart-input-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--yellow)" stroke="none" style="vertical-align:-1px;margin-right:4px"><path d="M12 2c-3.5 0-6 2.5-6 6 0 4.5 6 12 6 12s6-7.5 6-12c0-3.5-2.5-6-6-6zm0 9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>Адрес доставки</label>
+        <input type="text" id="cartAddress" placeholder="Улица, дом, квартира..." class="cart-input">
+      </div>
+      <div class="cart-actions">
+        <button class="btn-clear" id="btnClearCart" title="Очистить корзину"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+        <button class="btn btn-primary btn-order btn-order-full" id="btnOrderWhatsapp">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="cart-floating-btn" id="cartFloatingBtn">
+    <span class="cart-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg></span>
+    <span class="cart-badge" id="cartBadge">0</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
