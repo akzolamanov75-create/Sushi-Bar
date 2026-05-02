@@ -149,9 +149,11 @@ document.querySelectorAll('.btn-cart').forEach(btn => {
   btn.addEventListener('click', function () {
     const card = this.closest('.menu-card');
     const name = card.querySelector('h3').textContent;
-    let priceText = card.querySelector('.price').textContent;
-    // Очищаем от лишнего текста, берем только числа
-    const price = parseInt(priceText.replace(/\D/g, ''));
+    let priceEl = card.querySelector('.price').cloneNode(true);
+    // Удаляем старую (перечёркнутую) цену, если есть
+    const oldPrice = priceEl.querySelector('.old');
+    if (oldPrice) oldPrice.remove();
+    const price = parseInt(priceEl.textContent.replace(/\D/g, ''));
 
     const existing = cart.find(i => i.name === name);
     if (existing) {
