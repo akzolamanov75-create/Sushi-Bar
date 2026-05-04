@@ -89,7 +89,28 @@ button{font-family:inherit;cursor:pointer}
 
 /* SIZE PILLS (for pizza) */
 .sizes{display:flex;gap:6px;margin-bottom:10px}
-.size-pill{font-size:.72rem;padding:3px 8px;border-radius:20px;background:rgba(255,214,0,.08);border:1px solid rgba(255,214,0,.2);color:var(--yellow)}
+.size-pill{
+  font-size:.72rem;
+  padding:3px 10px;
+  border-radius:20px;
+  background:rgba(255,214,0,.08);
+  border:1px solid rgba(255,214,0,.2);
+  color:var(--yellow);
+  cursor: pointer;
+  transition: var(--tr);
+  user-select: none;
+}
+.size-pill:hover:not(.active) {
+  background: rgba(255,214,0,.2);
+  transform: translateY(-1px);
+}
+.size-pill.active {
+  background: var(--yellow);
+  color: #000;
+  border-color: var(--yellow);
+  font-weight: 700;
+  box-shadow: 0 0 10px var(--yellow-glow);
+}
 
 /* COMBO CARD */
 .menu-card.combo{border-color:rgba(255,214,0,.2);background:linear-gradient(135deg,#1a1a0a,#1a1a1a)}

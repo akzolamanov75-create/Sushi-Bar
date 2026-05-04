@@ -60,6 +60,27 @@ tabs.forEach(tab => {
   });
 });
 
+// ===== ВЫБОР РАЗМЕРА ПИЦЦЫ =====
+document.querySelectorAll('.size-pill').forEach(pill => {
+  pill.addEventListener('click', function() {
+    const card = this.closest('.menu-card');
+    const pills = card.querySelectorAll('.size-pill');
+    
+    // Переключаем активный класс
+    pills.forEach(p => p.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Обновляем цену на карточке
+    const newPrice = this.dataset.price;
+    const priceEl = card.querySelector('.price');
+    const unitEl = priceEl.querySelector('.unit');
+    
+    // Сохраняем unit (сом)
+    const unitText = unitEl ? unitEl.outerHTML : '<span class="unit">сом</span>';
+    priceEl.innerHTML = `${newPrice} ${unitText}`;
+  });
+});
+
 // Стили для анимации карточек
 cards.forEach(card => {
   card.style.transition = 'opacity .3s ease, transform .3s ease, border-color .3s ease, box-shadow .3s ease';
@@ -148,7 +169,15 @@ window.updateQty = function(index, delta) {
 document.querySelectorAll('.btn-cart').forEach(btn => {
   btn.addEventListener('click', function () {
     const card = this.closest('.menu-card');
-    const name = card.querySelector('h3').textContent;
+    let name = card.querySelector('h3').textContent;
+    
+    // Если есть выбор размера, добавляем его к названию
+    const activeSize = card.querySelector('.size-pill.active');
+    if (activeSize) {
+      const sizeText = activeSize.textContent.split('—')[0].trim(); // Берем "30см" или "35см"
+      name += ` (${sizeText})`;
+    }
+
     let priceEl = card.querySelector('.price').cloneNode(true);
     // Удаляем старую (перечёркнутую) цену, если есть
     const oldPrice = priceEl.querySelector('.old');
